@@ -1,6 +1,10 @@
 package net.bsgthegreat.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.bsgthegreat.tutorialmod.block.ModBlocks;
+import net.bsgthegreat.tutorialmod.item.ModCreativeModeTabs;
+import net.bsgthegreat.tutorialmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -15,18 +19,20 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MOD_ID)
-public class TutorialMod
-{
-    // Define mod id in a common place for everything to reference
+public class TutorialMod {
     public static final String MOD_ID = "tutorialmod";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public TutorialMod()
-    {
+    public TutorialMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
+
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
     }
@@ -36,8 +42,12 @@ public class TutorialMod
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.RAW_SAPPHIRE);
+
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
