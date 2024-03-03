@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.bsgthegreat.tutorialmod.block.ModBlocks;
 import net.bsgthegreat.tutorialmod.item.ModCreativeModeTabs;
 import net.bsgthegreat.tutorialmod.item.ModItems;
+import net.bsgthegreat.tutorialmod.loot.ModLootModifiers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +36,8 @@ public class TutorialMod {
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
+        ModLootModifiers.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

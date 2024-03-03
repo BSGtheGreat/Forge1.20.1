@@ -1,6 +1,7 @@
 package net.bsgthegreat.tutorialmod.item;
 
 import net.bsgthegreat.tutorialmod.TutorialMod;
+import net.bsgthegreat.tutorialmod.block.ModBlocks;
 import net.bsgthegreat.tutorialmod.item.custom.FuelItem;
 import net.bsgthegreat.tutorialmod.item.custom.MetalDetectorItem;
 import net.bsgthegreat.tutorialmod.item.custom.ModArmorItem;
@@ -50,6 +51,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
             () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> CORN = ITEMS.register("corn",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
+
     public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
             () -> new FuelItem(new Item.Properties(), 400));
 
