@@ -27,9 +27,29 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.STRAWBERRY.get());
 
                 pOutput.accept(ModItems.METAL_DETECTOR.get());
+                pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
 
-                pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
+                pOutput.accept(ModItems.SAPPHIRE_PICKAXE.get());
+                pOutput.accept(ModItems.SAPPHIRE_AXE.get());
+                pOutput.accept(ModItems.SAPPHIRE_SHOVEL.get());
+                pOutput.accept(ModItems.SAPPHIRE_HOE.get());
+
                 pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
+                pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+
+                pOutput.accept(ModBlocks.SAPPHIRE_STAIRS.get());
+                pOutput.accept(ModBlocks.SAPPHIRE_SLAB.get());
+
+                pOutput.accept(ModBlocks.SAPPHIRE_BUTTON.get());
+                pOutput.accept(ModBlocks.SAPPHIRE_PRESSURE_PLATE.get());
+
+                pOutput.accept(ModBlocks.SAPPHIRE_FENCE.get());
+                pOutput.accept(ModBlocks.SAPPHIRE_FENCE_GATE.get());
+                pOutput.accept(ModBlocks.SAPPHIRE_WALL.get());
+
+                pOutput.accept(ModBlocks.SAPPHIRE_DOOR.get());
+                pOutput.accept(ModBlocks.SAPPHIRE_TRAPDOOR.get());
 
                 pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
                 pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
