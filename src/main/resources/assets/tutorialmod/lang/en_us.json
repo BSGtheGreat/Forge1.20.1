@@ -7,8 +7,10 @@
   "item.tutorialmod.strawberry": "Strawberry",
   "item.tutorialmod.strawberry_seeds": "Strawberry Seeds",
 
-"item.tutorialmod.corn": "Corn",
+  "item.tutorialmod.corn": "Corn",
   "item.tutorialmod.corn_seeds": "Corn Seeds",
+
+  "block.tutorialmod.catmint": "Catmint",
 
   "item.tutorialmod.metal_detector": "Metal Detector",
   "item.tutorialmod.sapphire_staff": "Sapphire Staff",
