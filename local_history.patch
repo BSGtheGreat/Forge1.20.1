@@ -1,0 +1,18 @@
+Index: src/main/java/net/bsgthegreat/tutorialmod/datagen/ModBlockTagGenerator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/net/bsgthegreat/tutorialmod/datagen/ModBlockTagGenerator.java b/src/main/java/net/bsgthegreat/tutorialmod/datagen/ModBlockTagGenerator.java
+--- a/src/main/java/net/bsgthegreat/tutorialmod/datagen/ModBlockTagGenerator.java	
++++ b/src/main/java/net/bsgthegreat/tutorialmod/datagen/ModBlockTagGenerator.java	(date 1709257874595)
+@@ -36,6 +36,9 @@
+         this.tag(BlockTags.NEEDS_STONE_TOOL)
+                 .add(ModBlocks.NETHER_SAPPHIRE_ORE.get());
+ 
++        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
++                .add(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
++
+ 
+         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                 .add(ModBlocks.SAPPHIRE_BLOCK.get(),
